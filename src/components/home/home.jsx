@@ -5,20 +5,27 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons'
 
 const Home = () => { return (
-  <div className="text-white w-full h-screen flex justify-between items-center" style={{ backgroundImage: `url(${landing})` }}>
+  <div className="text-white w-full h-screen flex justify-evenly items-center antialiased" style={{ backgroundImage: `url(${landing})` }}>
     <div>
     <FontAwesomeIcon className="text-6xl font-bold" icon={faChevronLeft} />
      </div>
-    <div>
-      <h1 className="text-3xl font-bold">
-        Welcome to Sushi Restaurant
+    <div className="flex flex-col items-center space-y-4">
+      <h1 className="text-4xl text-center">
+        Welcome to <span className="font-bold">Shushi</span> Restaurant
       </h1>
-      <p>
-        People eat with their eyes and Shushi Restaurant creates an easy way
-        for customers to order when they can see beautiful photos of your food
+      <p className="flex flex-col items-center">
+        <span>People eat with their eyes and Shushi Restaurant creates an easy way</span>
+        <span>for customers to order when they can see beautiful photos of your food</span>
       </p>
-      <a href="https://www.google.com/">About</a>
-      <a href="https://www.google.com/">Menu</a>
+      <div className="flex justify-center items-center space-x-4">
+      <a class="inline-block bg-white px-6 py-2 border-2 border-gray-800 text-gray-800 font-large text-xs leading-tight uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out"  href="https://www.google.com/">
+      About
+      </a>
+      <a  class="inline-block bg-white px-6 py-2 border-2 border-gray-800 text-gray-800 font-large text-xs leading-tight uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out"  href="https://www.google.com/">
+      Menu
+      </a>
+      </div>
+
     </div>
     <div>
     <FontAwesomeIcon className="text-6xl font-bold" icon={faChevronRight} />
