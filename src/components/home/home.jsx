@@ -1,10 +1,14 @@
 import React from 'react';
 // import { Link } from 'react-router-dom';
 import landing from '../../assets/images/landing.svg';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons'
 
 const Home = () => { return (
   <div className="text-white w-full h-screen flex justify-between items-center" style={{ backgroundImage: `url(${landing})` }}>
-    <div>Chevron left</div>
+    <div>
+    <FontAwesomeIcon className="text-6xl font-bold" icon={faChevronLeft} />
+     </div>
     <div>
       <h1 className="text-3xl font-bold">
         Welcome to Sushi Restaurant
@@ -16,7 +20,9 @@ const Home = () => { return (
       <a href="https://www.google.com/">About</a>
       <a href="https://www.google.com/">Menu</a>
     </div>
-    <div>Chevron right</div>
+    <div>
+    <FontAwesomeIcon className="text-6xl font-bold" icon={faChevronRight} />
+    </div>
   </div>
 );
 };
