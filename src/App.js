@@ -2,7 +2,8 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Cart from './components/cart/cart';
 import Home from './components/home/home';
-import Menu from './components/Menu';
+import Menu from './components/menu/menu';
+import contents from './components/content';
 import './App.css';
 
 function App() {
@@ -13,33 +14,17 @@ function App() {
         <Route path="/cart" element={<Cart />} />
         <Route path="/menu" element={<Menu />} />
       </Routes>
+      <div className="App">
+        {contents.map((contents) => (
+          <Menu
+            key={contents.id}
+            image={contents.image}
+            name={contents.name}
+          />
+        ))}
+      </div>
     </BrowserRouter>
   );
 }
 
-// function App() {
-//   return (
-//     <>
-//       {/* This is the alias of BrowserRouter i.e. Router */}
-//       <Router>
-//         <Routes>
-//           {/* This route is for home component
-//           with exact path "/", in component props
-//           we passes the imported component */}
-//           <Route exact path="/" component={Home} />
-
-//           {/* This route is for about component
-//           with exact path "/about", in component
-//           props we passes the imported component */}
-//           <Route path="/menu" component={Menu} />
-
-//           {/* If any route mismatches the upper
-//           route endpoints then, redirect triggers
-//           and redirects app to home component with to="/" */}
-//           {/* <Redirect to="/" /> */}
-//         </Routes>
-//       </Router>
-//     </>
-//   );
-// }
 export default App;
