@@ -1,14 +1,19 @@
-import './App.css';
 import React from 'react';
-// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-// import Menu from './components/Menu';
-import Home from './components/Home';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Cart from './components/cart/cart';
+import Home from './components/home/home';
+import Menu from './components/Menu';
+import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <Home />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/menu" element={<Menu />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
