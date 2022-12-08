@@ -7,6 +7,7 @@ module.exports = {
     extend: {
       colors: {
         white: '#ffffff',
+        beige: '#f1d5bb',
       },
     },
   },
