@@ -18,16 +18,18 @@ function Cart() {
   return (
     <div className="flex flex-row p-2 justify-evenly h-screen w-screen">
       <Sidebar />
-      <div className="w-4/5">
-        <h2 className="text-3xl font-bold">CART</h2>
-        <div className="flex flex-row p-1 justify-evenly">
-          <div className="w-1/2">
+      <div className="w-4/5 h-4/5 mt-16">
+
+        <h2 className="text-3xl font-bold max-w-max border-b-4 border-beige">CART</h2>
+
+        <div className="flex flex-row justify-between mt-4">
+          <div className="w-7/12">
             {cartObject.map((item) => <CartElement key={item.id} obj={item} />)}
           </div>
-          <div className="w-2/5">
-            <div className="w-full bg-beige p-6 flex-col">
+          <div className="w-4/12">
+            <div className="w-full bg-beige p-6 flex flex-col">
               <h3 className="font-bold text-2xl mb-4">Your Subtotal</h3>
-              <p className="mb-3 ">
+              <p className="mb-3">
                 <span>Subtotal $</span>
                 <span>80.00</span>
               </p>
@@ -42,7 +44,10 @@ function Cart() {
                 value="code"
                 className="p-2 border mb-1 w-1/2"
               />
-              <Button texte="Apply" />
+              <div className="w-1/3">
+                <Button texte="Apply" />
+              </div>
+
             </div>
           </div>
         </div>
