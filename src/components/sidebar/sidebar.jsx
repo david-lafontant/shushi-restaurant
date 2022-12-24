@@ -10,7 +10,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 const Sidebar = () => (
-  <div className="bg-black text-white w-1/12 h-4/5 rounded-md shadow-2xl mt-16">
+  <div className="bg-black text-white w-1/12 h-4/5 rounded-md shadow-2xl mt-16 fixed left-4">
 
     <ul className="text-4xl flex flex-col items-center h-full justify-evenly w-full">
       <li className="text-beige py-4 font-bold antialiased cursor-pointer hover:bg-beige hover:text-black w-full text-center ">
