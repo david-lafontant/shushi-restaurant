@@ -10,7 +10,11 @@ const Home = () => (
     style={{ backgroundImage: `url(${landing})` }}
   >
     <div className="cursor-pointer">
-      <FontAwesomeIcon className="text-6xl font-bold" icon={faChevronLeft} />
+
+      <Link to="/cart">
+
+        <FontAwesomeIcon className="text-6xl font-bold" icon={faChevronLeft} />
+      </Link>
     </div>
     <div className="flex flex-col items-center space-y-4">
       <h1 className="text-4xl text-center">
@@ -31,7 +35,7 @@ const Home = () => (
           type="button"
           className="inline-block bg-white px-6 py-2 border-2 border-gray-800 text-gray-800 font-large text-xs leading-tight uppercase hover:bg-black focus:outline-none focus:ring-0 transition duration-150 ease-in-out"
         >
-          <Link to="/about">About</Link>
+          <Link to="/cart">cart</Link>
         </button>
         <button
           type="button"
@@ -42,7 +46,10 @@ const Home = () => (
       </div>
     </div>
     <div className="cursor-pointer">
-      <FontAwesomeIcon className="text-6xl font-bold" icon={faChevronRight} />
+      <Link to="/menu">
+        <FontAwesomeIcon className="text-6xl font-bold" icon={faChevronRight} />
+      </Link>
+
     </div>
   </div>
 );
